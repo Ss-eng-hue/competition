@@ -7,7 +7,7 @@ import my_sql
 cursor = my_sql.cursor
 root = Tk()  # 创建Tk控件
 root.title("登录界面")  # 窗口标题
-root.iconbitmap('图标.ico')  # 窗口图标
+root.iconbitmap('../pic/图标.ico')  # 窗口图标
 root.geometry("620x420+400+150")  # 窗口大小
 root.resizable(0, 0)  # 窗体大小不允许变，两个参数分别代表x轴和y轴
 root["bg"] = "DeepSkyBlue"  # 背景颜色
