@@ -726,6 +726,13 @@ def new_window():  # 主窗口
     # 左侧按钮区域
     bt_left = PanedWindow(user_root, width=200, height=535)
     bt_left.place(x=4, y=94)
+
+
+
+    1
+
+
+
     # 添加按钮
     Button_add = Button(bt_left, text="添加客户", font=('华文行楷', 16), command=add_window)
     Button_add.place(x=50, y=20)
