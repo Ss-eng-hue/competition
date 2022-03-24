@@ -12,6 +12,7 @@ from tkinter.ttk import Combobox
 import time
 import pymysql
 from tkinter import *
+from src.api import *
 
 connection = pymysql.connect(host='localhost',
                              user='root',
@@ -726,13 +727,6 @@ def new_window():  # 主窗口
     # 左侧按钮区域
     bt_left = PanedWindow(user_root, width=200, height=535)
     bt_left.place(x=4, y=94)
-
-
-
-    1
-
-
-
     # 添加按钮
     Button_add = Button(bt_left, text="添加客户", font=('华文行楷', 16), command=add_window)
     Button_add.place(x=50, y=20)
@@ -746,6 +740,22 @@ def new_window():  # 主窗口
     Button_modify.place(x=50, y=220)
     Button_remove = Button(bt_left, text="删除账号", font=('华文行楷', 16), command=delete_users)
     Button_remove.place(x=50, y=270)
+
+
+
+    # todo pendin' button   数据统计 报表 客房预订 推荐
+    bt_statistic= Button(bt_left, text="数据统计", font=('华文行楷', 16), command=api.show_statistic)
+    bt_statistic.place(x=50, y=320)
+    bt_table= Button(bt_left, text="报表", font=('华文行楷', 16), command=api.show_table)
+    bt_table.place(x=50, y=370)
+    bt_reserve= Button(bt_left, text="客房预订", font=('华文行楷', 16), command=api.show_reserve)
+    bt_reserve.place(x=50, y=420)
+    bt_recommend= Button(bt_left, text="推荐", font=('华文行楷', 16), command=api.show_recommend)
+    bt_recommend.place(x=50, y=470)
+
+
+
+
     # 右侧按钮区域
     bt_right = PanedWindow(user_root, width=685, height=535)
     bt_right.place(x=210, y=94)
