@@ -45,7 +45,7 @@ def sign_window():  # 注册窗口
     global sign_root, var_use, var_password
     sign_root = Toplevel(root)
     sign_root.title("注册")
-    sign_root.iconbitmap('图标.ico')
+    sign_root.iconbitmap('../pic/图标.ico')
     sign_root.resizable(0, 0)
     sign_root.geometry("400x320+500+100")
     sign_root['bg'] = 'DeepSkyBlue'
