@@ -177,7 +177,7 @@ def show_data(sign):  # 明细窗口
     data_root.resizable(0, 0)  # 不能改变大小
     data_root['bg'] = 'DeepSkyBlue'
     # 添加图片
-    data_photo = PhotoImage(file="明细窗口.png")
+    data_photo = PhotoImage(file= "../pic/明细窗口.png")
     data_image_lable = Label(data_root, image=data_photo)
     data_image_lable.pack()
     # 添加图片标题
@@ -392,7 +392,7 @@ def delete_window():  # 删除窗口
     delete_root.resizable(0, 0)  # 不能改变大小
     delete_root['bg'] = 'DeepSkyBlue'
     # 添加图片
-    delete_photo = PhotoImage(file="明细窗口.png")
+    delete_photo = PhotoImage(file= "../pic/明细窗口.png")
     delete_image_lable = Label(delete_root, image=delete_photo)
     delete_image_lable.pack()
     # 添加文本
@@ -720,7 +720,7 @@ def new_window():  # 主窗口
     user_root.resizable(0, 0)
     user_root.geometry("900x640+180+80")
     user_root['bg'] = 'DeepSkyBlue'
-    user_photo = PhotoImage(file="欢迎使用.png")
+    user_photo = PhotoImage(file= "../pic/欢迎使用.png")
     usert_image_lable = Label(user_root, image=user_photo)
     usert_image_lable.pack()
     # 左侧按钮区域
@@ -814,21 +814,6 @@ def new():  # 666窗口
     bt3.pack(padx=10, pady=10)
 
 
-def save_sign():  # 注册函数
-    a = var_use.get()
-    b = var_password.get()
-    try:
-        cursor.execute('insert into 管理员(账号,密码) values(%s,%s)', (a, b))
-        connection.commit()
-    except pymysql.DatabaseError:
-        connection.rollback()
-    else:
-        messagebox.showinfo(title='提示', message='注册成功')
-        sign_root.destroy()
-
-
-def close_sign():  # 关闭注册界面
-    sign_root.destroy()
 
 
 
