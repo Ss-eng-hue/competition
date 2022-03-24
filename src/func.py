@@ -814,21 +814,6 @@ def new():  # 666窗口
     bt3.pack(padx=10, pady=10)
 
 
-def save_sign():  # 注册函数
-    a = var_use.get()
-    b = var_password.get()
-    try:
-        cursor.execute('insert into 管理员(账号,密码) values(%s,%s)', (a, b))
-        connection.commit()
-    except pymysql.DatabaseError:
-        connection.rollback()
-    else:
-        messagebox.showinfo(title='提示', message='注册成功')
-        sign_root.destroy()
-
-
-def close_sign():  # 关闭注册界面
-    sign_root.destroy()
 
 
 
