@@ -13,7 +13,7 @@ root.resizable(0, 0)  # 窗体大小不允许变，两个参数分别代表x轴�
 root["bg"] = "DeepSkyBlue"  # 背景颜色
 # 创建一个Label标签展示图片并设为背景
 
-photo = PhotoImage(file="登录.png")
+photo = PhotoImage(file= "../pic/登录.png")
 image_lable = Label(root, image=photo, text='\t\t大数据与人工智能学院\n\n\t\t\t民宿管理系统',
                     justify=LEFT, compound=CENTER, font=('华文行楷', 26))
 image_lable.pack(padx=10, pady=10)
